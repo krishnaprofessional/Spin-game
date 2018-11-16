@@ -10,7 +10,7 @@ Configuration:
 
 2. Go-to project directory.
 
-3. cd win_game.
+3. cd Spin_game.
 
 4. cd server.
 

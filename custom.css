@@ -1,0 +1,189 @@
+#bonus_image_box:active {
+    transition: all 0.5s linear;
+}
+#bonus_image_box:active {
+    transform: scale(0.9, 0.9);
+}
+#bonus_image_box:hover {
+    transform: scale(1.2, 1.2);
+}
+#win_image_box>div {
+    display: inline;
+}
+.main{
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    height: 100%;  
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+.title{
+    color: #fff;
+}
+
+.body-div {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+      
+}
+#spin_btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    transform: translate(-50%);
+}
+@media (min-width: 1140px) {
+    #win_image_box img {
+        width: 150px;
+        height:auto;
+    }
+    .body-div {
+        width: 500px;
+        height: 300px;
+    }
+    #bonus_image {
+        width: 400px;
+        height: auto;
+    }
+    #spin_btn img {
+        height: 80px;
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #win_image_box img {
+        width: 100px;
+        height:auto;
+    }
+    .body-div {
+        width: 500px;
+        height: 250px;
+    }
+    #bonus_image {
+        width: 350px;
+        height: auto;
+    }
+    #spin_btn img {
+        height: 50px;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #win_image_box img {
+        width: 85px;
+        height:auto;
+    }
+    .body-div {
+        width: 500px;
+        height: 240px;
+    }
+    #bonus_image {
+        width: 300px;
+        height: auto;
+    }
+    #spin_btn img {
+        height: 40px;
+        width: auto;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    #win_image_box img {
+        width: 90px;
+        height:auto;
+    }
+    .body-div {
+        width: 100%;
+        height: 240px;
+    }
+    #bonus_image {
+        width: 250px;
+        height: auto;
+    }
+    #spin_btn img {
+        height: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #win_image_box img {
+        width: 75px;
+        height:auto;
+    }
+    .body-div {
+        width: 100%;
+        height: 200px;
+    }
+    #bonus_image {
+        width: 200px;
+        height: auto;
+    }
+    #spin_btn img {
+        height: 40px;
+        width: auto;
+    }
+}
+@import "compass/css3";
+
+body, html {
+ height: 100%;
+
+}
+
+.container {
+  width: 200px;
+  height: 100%;
+  margin: 0 auto 0;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  
+}
+
+.pulse-button {
+  position: relative;
+  margin-left: 30px;
+
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #5a99d4;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(#5a99d4, .5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    @include transform(scale(.9));
+  }
+  70% {
+    @include transform(scale(1));
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+    100% {
+    @include transform(scale(.9));
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+}
